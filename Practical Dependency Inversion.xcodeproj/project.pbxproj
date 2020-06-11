@@ -14,7 +14,7 @@
 		7E35BB1C249223DA005C926B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E35BB1A249223DA005C926B /* LaunchScreen.storyboard */; };
 		7E35BB24249224C1005C926B /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E35BB23249224C1005C926B /* ApiClient.swift */; };
 		7E35BB2624922541005C926B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E35BB2524922541005C926B /* DataManager.swift */; };
-		7E35BB282492265D005C926B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E35BB272492265D005C926B /* Item.swift */; };
+		7E35BB282492265D005C926B /* RemoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E35BB272492265D005C926B /* RemoteItem.swift */; };
 		7E35BB2A2492267A005C926B /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E35BB292492267A005C926B /* ItemsViewController.swift */; };
 		7E35BB2C249227F3005C926B /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E35BB2B249227F3005C926B /* ItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +29,7 @@
 		7E35BB1D249223DA005C926B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E35BB23249224C1005C926B /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		7E35BB2524922541005C926B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		7E35BB272492265D005C926B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		7E35BB272492265D005C926B /* RemoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteItem.swift; sourceTree = "<group>"; };
 		7E35BB292492267A005C926B /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		7E35BB2B249227F3005C926B /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,7 +69,7 @@
 				7E35BB15249223D8005C926B /* Main.storyboard */,
 				7E35BB23249224C1005C926B /* ApiClient.swift */,
 				7E35BB2524922541005C926B /* DataManager.swift */,
-				7E35BB272492265D005C926B /* Item.swift */,
+				7E35BB272492265D005C926B /* RemoteItem.swift */,
 				7E35BB292492267A005C926B /* ItemsViewController.swift */,
 				7E35BB2B249227F3005C926B /* ItemTableViewCell.swift */,
 				7E35BB18249223DA005C926B /* Assets.xcassets */,
@@ -150,7 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E35BB282492265D005C926B /* Item.swift in Sources */,
+				7E35BB282492265D005C926B /* RemoteItem.swift in Sources */,
 				7E35BB2A2492267A005C926B /* ItemsViewController.swift in Sources */,
 				7E35BB10249223D8005C926B /* AppDelegate.swift in Sources */,
 				7E35BB2624922541005C926B /* DataManager.swift in Sources */,

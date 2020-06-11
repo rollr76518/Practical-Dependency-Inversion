@@ -8,9 +8,28 @@
 
 import UIKit
 
+struct Item {
+    let titleText: String
+    let contentText: String
+}
+
+protocol ItemsViewControllerSpec {
+    
+    func items(completion: @escaping (Result<[Item], Error>) -> Void)
+}
+
 class ItemsViewController: UIViewController {
     
-    private let dataManager = DataMananger()
+    init(spec: ItemsViewControllerSpec) {
+        self.spec = spec
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private let spec: ItemsViewControllerSpec
     
     private var items: [Item] = []
     
@@ -19,7 +38,7 @@ class ItemsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataManager.items { [weak self] (result) in
+        spec.items { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let items):

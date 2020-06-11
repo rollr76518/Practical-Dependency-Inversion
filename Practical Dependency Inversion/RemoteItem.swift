@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Item: Codable {
+struct RemoteItem: Codable {
     let titleText: String
     let contentText: String
     let imageURL: URL
