@@ -77,3 +77,14 @@ extension ItemsViewController {
         return tableView
     }
 }
+
+extension Item: ItemTableViewCellSpec {
+    
+    var title: String? {
+        return titleText
+    }
+    
+    var content: String? {
+        return contentText
+    }
+}

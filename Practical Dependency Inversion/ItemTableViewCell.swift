@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol ItemTableViewCellSpec {
+    
+    var title: String? { get }
+    var content: String? { get }
+}
+
 class ItemTableViewCell: UITableViewCell {
 
     private lazy var titleLabel = makeTitleLabel()
@@ -26,9 +32,9 @@ class ItemTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func layoutUI(with item: Item) {
-        titleLabel.text = item.titleText
-        contentLabel.text = item.contentText
+    func layoutUI(with spec: ItemTableViewCellSpec) {
+        titleLabel.text = spec.title
+        contentLabel.text = spec.content
     }
 }
 
