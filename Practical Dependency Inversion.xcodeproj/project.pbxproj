@@ -12,6 +12,11 @@
 		7E35BB17249223D8005C926B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E35BB15249223D8005C926B /* Main.storyboard */; };
 		7E35BB19249223DA005C926B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E35BB18249223DA005C926B /* Assets.xcassets */; };
 		7E35BB1C249223DA005C926B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E35BB1A249223DA005C926B /* LaunchScreen.storyboard */; };
+		7E35BB24249224C1005C926B /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E35BB23249224C1005C926B /* ApiClient.swift */; };
+		7E35BB2624922541005C926B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E35BB2524922541005C926B /* DataManager.swift */; };
+		7E35BB282492265D005C926B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E35BB272492265D005C926B /* Item.swift */; };
+		7E35BB2A2492267A005C926B /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E35BB292492267A005C926B /* ItemsViewController.swift */; };
+		7E35BB2C249227F3005C926B /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E35BB2B249227F3005C926B /* ItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
