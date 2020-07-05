@@ -33,19 +33,25 @@ class ItemsViewController: UIViewController {
     
     private var items: [Item] = []
     
-    private lazy var tabelView = makeTabelView()
+    private lazy var tableView = makeTableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        ])
         
         spec.items { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let items):
                 self.items = items
-                DispatchQueue.main.async {
-                    self.tabelView.reloadData()
-                }
+                self.tableView.reloadData()
             case .failure(let error):
                 //Present error
                 print(error)
@@ -61,7 +67,7 @@ extension ItemsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tabelView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as! ItemTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as! ItemTableViewCell
         let item = items[indexPath.row]
         cell.layoutUI(with: item)
         return cell
@@ -70,10 +76,11 @@ extension ItemsViewController: UITableViewDataSource {
 
 extension ItemsViewController {
     
-    private func makeTabelView() -> UITableView {
+    private func makeTableView() -> UITableView {
         let tableView = UITableView(frame: .zero)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
-        tabelView.register(ItemTableViewCell.self, forCellReuseIdentifier: "ItemTableViewCell")
+        tableView.register(ItemTableViewCell.self, forCellReuseIdentifier: "ItemTableViewCell")
         return tableView
     }
 }
