@@ -20,6 +20,7 @@
 		7E51257C24B158A6002840CE /* RemoteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E51257B24B158A6002840CE /* RemoteLoader.swift */; };
 		7E51257E24B1593D002840CE /* LocalLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E51257D24B1593D002840CE /* LocalLoader.swift */; };
 		7E51258024B159EE002840CE /* PrimaryWithFallbackLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E51257F24B159EE002840CE /* PrimaryWithFallbackLoader.swift */; };
+		7E51258224B15CCC002840CE /* ItemsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E51258124B15CCC002840CE /* ItemsUIComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		7E51257B24B158A6002840CE /* RemoteLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLoader.swift; sourceTree = "<group>"; };
 		7E51257D24B1593D002840CE /* LocalLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLoader.swift; sourceTree = "<group>"; };
 		7E51257F24B159EE002840CE /* PrimaryWithFallbackLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryWithFallbackLoader.swift; sourceTree = "<group>"; };
+		7E51258124B15CCC002840CE /* ItemsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsUIComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				7E35BB18249223DA005C926B /* Assets.xcassets */,
 				7E35BB2524922541005C926B /* DataManager.swift */,
 				7E35BB1D249223DA005C926B /* Info.plist */,
+				7E51258124B15CCC002840CE /* ItemsUIComposer.swift */,
 				7E35BB292492267A005C926B /* ItemsViewController.swift */,
 				7E35BB2B249227F3005C926B /* ItemTableViewCell.swift */,
 				7E35BB1A249223DA005C926B /* LaunchScreen.storyboard */,
@@ -165,6 +168,7 @@
 				7E35BB10249223D8005C926B /* AppDelegate.swift in Sources */,
 				7E35BB2624922541005C926B /* DataManager.swift in Sources */,
 				7E35BB12249223D8005C926B /* SceneDelegate.swift in Sources */,
+				7E51258224B15CCC002840CE /* ItemsUIComposer.swift in Sources */,
 				7E35BB2C249227F3005C926B /* ItemTableViewCell.swift in Sources */,
 				7E35BB24249224C1005C926B /* ApiClient.swift in Sources */,
 				7E51257E24B1593D002840CE /* LocalLoader.swift in Sources */,
