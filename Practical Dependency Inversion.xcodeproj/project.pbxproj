@@ -64,17 +64,17 @@
 		7E35BB0E249223D8005C926B /* Practical Dependency Inversion */ = {
 			isa = PBXGroup;
 			children = (
-				7E35BB0F249223D8005C926B /* AppDelegate.swift */,
-				7E35BB11249223D8005C926B /* SceneDelegate.swift */,
-				7E35BB15249223D8005C926B /* Main.storyboard */,
 				7E35BB23249224C1005C926B /* ApiClient.swift */,
+				7E35BB0F249223D8005C926B /* AppDelegate.swift */,
+				7E35BB18249223DA005C926B /* Assets.xcassets */,
 				7E35BB2524922541005C926B /* DataManager.swift */,
-				7E35BB272492265D005C926B /* RemoteItem.swift */,
+				7E35BB1D249223DA005C926B /* Info.plist */,
 				7E35BB292492267A005C926B /* ItemsViewController.swift */,
 				7E35BB2B249227F3005C926B /* ItemTableViewCell.swift */,
-				7E35BB18249223DA005C926B /* Assets.xcassets */,
 				7E35BB1A249223DA005C926B /* LaunchScreen.storyboard */,
-				7E35BB1D249223DA005C926B /* Info.plist */,
+				7E35BB15249223D8005C926B /* Main.storyboard */,
+				7E35BB272492265D005C926B /* RemoteItem.swift */,
+				7E35BB11249223D8005C926B /* SceneDelegate.swift */,
 			);
 			path = "Practical Dependency Inversion";
 			sourceTree = "<group>";
