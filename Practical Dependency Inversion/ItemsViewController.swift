@@ -51,9 +51,7 @@ class ItemsViewController: UIViewController {
             switch result {
             case .success(let items):
                 self.items = items
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+                self.tableView.reloadData()
             case .failure(let error):
                 //Present error
                 print(error)
