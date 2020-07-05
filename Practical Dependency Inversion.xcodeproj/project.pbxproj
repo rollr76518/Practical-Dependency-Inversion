@@ -18,6 +18,7 @@
 		7E35BB2A2492267A005C926B /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E35BB292492267A005C926B /* ItemsViewController.swift */; };
 		7E35BB2C249227F3005C926B /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E35BB2B249227F3005C926B /* ItemTableViewCell.swift */; };
 		7E51257C24B158A6002840CE /* RemoteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E51257B24B158A6002840CE /* RemoteLoader.swift */; };
+		7E51257E24B1593D002840CE /* LocalLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E51257D24B1593D002840CE /* LocalLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		7E35BB292492267A005C926B /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		7E35BB2B249227F3005C926B /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		7E51257B24B158A6002840CE /* RemoteLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLoader.swift; sourceTree = "<group>"; };
+		7E51257D24B1593D002840CE /* LocalLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				7E35BB292492267A005C926B /* ItemsViewController.swift */,
 				7E35BB2B249227F3005C926B /* ItemTableViewCell.swift */,
 				7E35BB1A249223DA005C926B /* LaunchScreen.storyboard */,
+				7E51257D24B1593D002840CE /* LocalLoader.swift */,
 				7E35BB15249223D8005C926B /* Main.storyboard */,
 				7E35BB272492265D005C926B /* RemoteItem.swift */,
 				7E51257B24B158A6002840CE /* RemoteLoader.swift */,
@@ -161,6 +164,7 @@
 				7E35BB12249223D8005C926B /* SceneDelegate.swift in Sources */,
 				7E35BB2C249227F3005C926B /* ItemTableViewCell.swift in Sources */,
 				7E35BB24249224C1005C926B /* ApiClient.swift in Sources */,
+				7E51257E24B1593D002840CE /* LocalLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
