@@ -13,30 +13,24 @@ class MainThreadDecoratorTests: XCTestCase {
     
     
     func testCanCheckNotOnMainQueue() throws {
-        let testQueue = OperationQueue()
+        let testQueue = DispatchQueue(label: #function)
         let await = XCTestExpectation(description: #function)
-        let operation = BlockOperation {
-            XCTAssertEqual(testQueue, OperationQueue.current)
-            XCTAssertNil(OperationQueue.current?.underlyingQueue)
+        testQueue.async {
+            XCTAssertFalse(isMainQueue())
             await.fulfill()
         }
-        testQueue.addOperation(operation)
         wait(for: [await], timeout: 1)
     }
     func testCanCheckIsOnMainQueue() throws {
-        let testQueue = OperationQueue()
+        let testQueue = DispatchQueue(label: #function)
         let await = XCTestExpectation(description: #function)
-        
-        let operation = BlockOperation {
-            XCTAssertEqual(testQueue, OperationQueue.current)
-            XCTAssertNil(OperationQueue.current?.underlyingQueue)
+        testQueue.async {
+            XCTAssertFalse(isMainQueue())
             DispatchQueue.main.async {
-                XCTAssertEqual(.main, OperationQueue.current)
-                XCTAssertEqual(DispatchQueue.main, OperationQueue.current?.underlyingQueue)
+                XCTAssertTrue(isMainQueue())
                 await.fulfill()
             }
         }
-        testQueue.addOperation(operation)
         wait(for: [await], timeout: 1)
     }
     
@@ -61,36 +55,21 @@ class MainThreadDecoratorTests: XCTestCase {
         }
     }
     
-    func testItemUIComposerIsOnMainQueue() throws {
-        let await = XCTestExpectation(description: #function)
-        let spec = ItemViewControllerSpecCustomQueue(.main)
-        let sut = MainThreadDecorator(loader: spec)
-        sut.items {  (_) in
-            let clabel = __dispatch_queue_get_label(nil)
-            let currectLabel = String(cString: clabel)
-            XCTAssertEqual(
-                currectLabel,
-                DispatchQueue.main.label)
-            
-            await.fulfill()
-        }
-        wait(for: [await], timeout: 1)
-    }
-    
-    func testItemUIComposerIsNotMainQueue() throws {
+    func testItemUIComposerfromNotMainQueue() throws {
         let queue = DispatchQueue(label: #function)
         let await = XCTestExpectation(description: #function)
         let spec = ItemViewControllerSpecCustomQueue(queue)
         let sut = MainThreadDecorator(loader: spec)
         sut.items {  (_) in
-            let clabel = __dispatch_queue_get_label(nil)
-            let currectLabel = String(cString: clabel)
-            XCTAssertNotEqual(
-                currectLabel,
-                DispatchQueue.main.label)
-            
+            XCTAssertTrue(isMainQueue())
             await.fulfill()
         }
         wait(for: [await], timeout: 1)
     }
+}
+
+func isMainQueue() -> Bool{
+    let clabel = __dispatch_queue_get_label(nil)
+    let currectLabel = String(cString: clabel)
+    return currectLabel == DispatchQueue.main.label
 }
