@@ -35,7 +35,9 @@ class MainThreadDecorator: ItemsViewControllerSpec {
     }
     
     func items(completion: @escaping (Result<[Item], Error>) -> Void) {
-        guard (DispatchQueue.getSpecific(key: Self.mainQueueKey) == Self.mainQueueValue) else {
+        print("it is on the same queue of caller")
+        guard (DispatchQueue.getSpecific(key: Self.mainQueueKey) == Self.mainQueueValue)
+        else {
             DispatchQueue.main.async(execute: { self.loader.items(completion: completion)} )
             return
         }
