@@ -22,6 +22,7 @@
 		7E51258024B159EE002840CE /* PrimaryWithFallbackLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E51257F24B159EE002840CE /* PrimaryWithFallbackLoader.swift */; };
 		7E51258224B15CCC002840CE /* ItemsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E51258124B15CCC002840CE /* ItemsUIComposer.swift */; };
 		7EDDA12724B16093003393C1 /* ItemsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDDA12624B16093003393C1 /* ItemsViewControllerTests.swift */; };
+		A7F406A624BDB931005E381D /* MainThreadDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F406A524BDB931005E381D /* MainThreadDecoratorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		7EDDA11C24B15FF8003393C1 /* Practical Dependency InversionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Practical Dependency InversionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDDA12024B15FF8003393C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EDDA12624B16093003393C1 /* ItemsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerTests.swift; sourceTree = "<group>"; };
+		A7F406A524BDB931005E381D /* MainThreadDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainThreadDecoratorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				7EDDA12024B15FF8003393C1 /* Info.plist */,
 				7EDDA12624B16093003393C1 /* ItemsViewControllerTests.swift */,
+				A7F406A524BDB931005E381D /* MainThreadDecoratorTests.swift */,
 			);
 			path = "Practical Dependency InversionTests";
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7F406A624BDB931005E381D /* MainThreadDecoratorTests.swift in Sources */,
 				7EDDA12724B16093003393C1 /* ItemsViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
