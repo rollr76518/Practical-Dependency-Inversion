@@ -18,7 +18,7 @@ class ItemsUIComposer {
     }
 }
 
-private class MainThreadDecorator: ItemsViewControllerSpec {
+class MainThreadDecorator: ItemsViewControllerSpec {
     
     private let loader: ItemsViewControllerSpec
     
@@ -27,10 +27,14 @@ private class MainThreadDecorator: ItemsViewControllerSpec {
     }
     
     func items(completion: @escaping (Result<[Item], Error>) -> Void) {
-        guard Thread.isMainThread else {
-            DispatchQueue.main.async(execute: { self.loader.items(completion: completion)} )
-            return
+        loader.items {
+            result in
+            DispatchQueue.main.async {
+                completion(result)
+            }
+            
         }
-        loader.items(completion: completion)
     }
 }
+
+
